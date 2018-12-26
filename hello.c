@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include "hello.h"
 
-int print_hello()
-{
-  return 43;
-}
+int a = 10;
 
-int main()
+typedef struct {
+  int  dna[10];
+}pop;
+
+int create_dna()
 {
-  printf("%d\n",print_hello());
+  return 99;
 }

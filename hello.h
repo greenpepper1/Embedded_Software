@@ -1,1 +1,1 @@
-int print_hello();
+int create_dna();
