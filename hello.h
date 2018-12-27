@@ -1,1 +1,1 @@
-int create_dna();
+void create_dna();

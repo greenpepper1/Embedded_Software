@@ -1,13 +1,23 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "hello.h"
-
-int a = 10;
+#include "controls.h"
 
 typedef struct {
-  int  dna[10];
+  int  dna[DNA_SIZE];
 }pop;
 
-int create_dna()
+void create_dna()
 {
-  return 99;
+  pop member;
+  time_t t;
+  /* Intializes random number generator */
+  srand((unsigned) time(&t));
+
+  /* Print 5 random numbers from 0 to 49 */
+  for(int i=0; i < DNA_SIZE; i++)
+  {
+    member.dna[i] = rand() % DNA_VERI;
+    printf("%d\n", member.dna[i]);
+  }
 }
