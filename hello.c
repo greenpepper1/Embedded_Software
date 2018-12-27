@@ -3,21 +3,40 @@
 #include "hello.h"
 #include "controls.h"
 
-typedef struct {
+struct pop{
   int  dna[DNA_SIZE];
-}pop;
+};
 
-void create_dna()
+size_t obj_size(void) {
+    return sizeof(struct pop);
+}
+
+/* fills the dna */
+void create_dna(struct pop *p)
 {
-  pop member;
   time_t t;
+  struct pop member;
+  p = &member;
+
   /* Intializes random number generator */
   srand((unsigned) time(&t));
 
   /* Print 5 random numbers from 0 to 49 */
   for(int i=0; i < DNA_SIZE; i++)
   {
-    member.dna[i] = rand() % DNA_VERI;
-    printf("%d\n", member.dna[i]);
+    p->dna[i] = rand() % 10;
+    printf("%d\n", p->dna[i]);
+  }
+}
+
+/* shows the data in the dna */
+void show_dna(struct pop *p)
+{
+  struct pop member;
+  p = &member;
+  printf("\n");
+  for(int i=0; i < DNA_SIZE; i++)
+  {
+    printf("%d\n", p->dna[i]);
   }
 }
