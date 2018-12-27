@@ -1,27 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "hello.h"
+#include "pop_generator.h"
 #include "controls.h"
 
 struct pop{
   int  dna[DNA_SIZE];
 };
 
-size_t obj_size(void) {
-    return sizeof(struct pop);
-}
 
 /* fills the dna */
 void create_dna(struct pop *p)
 {
-  time_t t;
   struct pop member;
   p = &member;
 
   /* Intializes random number generator */
+  time_t t;
   srand((unsigned) time(&t));
 
-  /* Print 5 random numbers from 0 to 49 */
+  /* Print 5 random numbers from 0 to 9 */
   for(int i=0; i < DNA_SIZE; i++)
   {
     p->dna[i] = rand() % 10;

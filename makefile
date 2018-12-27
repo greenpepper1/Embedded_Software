@@ -1,7 +1,7 @@
 CFLAGS = -c -Wall -Iinclude
 
-hello: hello.c main.c
-	 gcc -o hello hello.c main.c
+dna: pop_generator.c main.c
+	 gcc -o dna pop_generator.c main.c
 
 clean:
-	 rm hello
+	 rm dna

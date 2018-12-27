@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "hello.h"
+#include "pop_generator.h"
 
 int main()
 {
