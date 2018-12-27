@@ -4,7 +4,7 @@
 
 int main()
 {
-  struct pop * member;
-  create_dna(member);
-  show_dna(member);
+  struct pop_t * pop_handel;
+  create_pop(pop_handel);
+  show_pop(pop_handel);
 }
