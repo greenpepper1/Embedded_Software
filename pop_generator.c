@@ -11,23 +11,34 @@ struct pop_t{
 /* fills the dna */
 void create_pop(struct pop_t *p)
 {
+  start_clock();
   struct pop_t pop;
-  p = &pop;
+  struct member_t *x = member_init();
+  create_member(x);
+  show_member(x);
 
-  pop.member = malloc(POP_SIZE * obj_size()); // assume it worked
+  struct member_t *q = member_init();
+  create_member(q);
+  show_member(q);
+  show_member(x);
 
-  /* Print 5 random numbers from 0 to 9 */
-  for(int i=0; i < POP_SIZE; i++)
-  {
-    // struct member_t * individual;
-    create_member(pop.member[i]);
-    // pop.member[i] = individual;
-  }
-
-  show_member(p->member[0]);
-  show_member(p->member[1]);
-  show_member(p->member[2]);
-  show_member(p->member[3]);
+  // struct pop_t pop;
+  // p = &pop;
+  //
+  // pop.member = malloc(POP_SIZE * obj_size()); // assume it worked
+  //
+  // /* Print 5 random numbers from 0 to 9 */
+  // for(int i=0; i < POP_SIZE; i++)
+  // {
+  //   // struct member_t * individual;
+  //   create_member(pop.member[i]);
+  //   // pop.member[i] = individual;
+  // }
+  //
+  // show_member(p->member[0]);
+  // show_member(p->member[1]);
+  // show_member(p->member[2]);
+  // show_member(p->member[3]);
   // printf("%d\n", pop.member[0]);
   // printf("%d\n", pop.member[1]);
   // printf("%d\n", pop.member[2]);
